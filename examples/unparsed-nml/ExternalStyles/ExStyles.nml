@@ -1,0 +1,19 @@
+// loads style.nss thats in the same folder
+import exstyle.nss
+
+rec: canvas
+{
+    width: 250
+    height: 200
+    colour: colour.black
+
+    img: pictureBlue
+    {
+        source: "pics/smallblue.png"
+        x: canvas.height / 2
+    }
+    img:
+    {
+        source: "pics/logo.png"
+    }
+}

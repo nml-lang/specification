@@ -1,0 +1,7 @@
+img: {
+    source: "pics/smallblue.png";
+    x: canvas.height / 2;
+}
+img: {
+    source: "pics/logo.png";
+}

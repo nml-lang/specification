@@ -1,0 +1,26 @@
+Style: img: #blue
+{
+    background: colour.blue
+}
+Style: img
+{
+    width: 50
+    height: 50
+}
+
+rec: #canvas
+{
+    width: 250;
+    height: 200;
+    colour: colour.black;
+
+    img: #blue
+    {
+        source: "pics/smallblue.png";
+        x: canvas.height / 2;
+    }
+    img:
+    {
+        source: "pics/logo.png";
+    }
+}
