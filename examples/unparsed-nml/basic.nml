@@ -1,13 +1,13 @@
 root {
-    title: "Basic example"
+    title "Basic example"
 }
 
-rec: #canvas
+rec:
 {
-    width: 250
-    height: 200
-    colour: colour.white
-    background: colour.black
+    width 250
+    height 200
+    colour colour.white
+    background colour.black
 
     img {
         source: "pics/smallblue.png"
