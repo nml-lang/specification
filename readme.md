@@ -4,9 +4,7 @@
 
 Inspired by:
 
-- html
-- sass
-
-Based on:
-
+- Html
+- Sass
 - Qml
+- C#

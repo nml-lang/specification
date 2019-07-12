@@ -1,0 +1,44 @@
+{
+    direction: Direction.Horizontal;
+
+    // Nameless generic object (can only have text).
+    {
+        text: base.router.route.name;
+    }
+
+    link {
+        // A name is not required but for readability its advised.
+        name: "Route breadcrumbs";
+
+        // Types in loops can be omitted but for readability its advised to keep them.
+        @for( segment in base.router.route.segments );
+        text: segment;
+        tag: [breadcrumb, link];
+    }
+
+    rec {
+        // With properties its possible to not type the enum type but only the enum value.
+        position: AtEnd;
+        // becomes position: Position.AtEnd;
+
+        dropdown {
+            text: base.user.name;
+            data: new [
+                { text: "Acount page", link: `/user/{base.user.id}` },
+                { text: "Logout", link: "/user/logout" }
+            ];
+            option {
+                /**
+                  * 'This.parent' is a link the parent is 'this' and you'll be able to access the properties of that element.
+                  * So you could do 'this.parent.parent.parent' but please don't do that use a 'ref: <elementname>' if you need that.
+                @for(link in this.parent.data);
+                text: link.text;
+                link: link.link;
+
+                // Yes you could also do this.
+                parent: this;
+                // But just don't. Or do im not the one getting a recursion error.
+            }
+        }
+    }
+}

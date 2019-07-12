@@ -1,0 +1,8 @@
+{
+    link {
+        @for: (Route route in base.router.routes);
+        text: route.name;
+        link: route.link;
+        tag: `{route.name}-link`
+    }
+}

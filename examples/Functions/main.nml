@@ -1,0 +1,35 @@
+rec {
+    import: button;
+
+    rec {
+        width: 250px;
+        height: 250px;
+
+        /**
+          * An click event as a Event object that invoked a method in the code
+          * (as rec doesn't have a default event type a generic event is used)
+          */
+        @click: (Event event) => clickRec(event);
+    }
+
+    form {
+        input {
+            name: "row1";
+            type: text;
+            restrict: Restrict.letters;
+        }
+        input {
+            name: "row2";
+            type: number;
+        }
+        // Submit event with the submited data casted to a certain type (defaults to a generic object)
+        @submit: (TableData formdata) => {
+            table.data.Add(formdata);
+        };
+    }
+    // #table or ref: table can both be used to identify a ref with name table
+    table #table {
+        // ref: table;
+        data: rows;
+    }
+}

@@ -1,0 +1,8 @@
+button {
+    background: #000000;
+    // A event as a ButtonEvent this is the default for a button so the type could be removed
+    @click: (ButtonEvent event) => {
+        if( event.ClickType == ClickType.LeftButton ) this.background = #ffffff;
+        else if( event.ClickType == ClickType.MiddleButton ) this.background = #cccccc;
+    };
+}

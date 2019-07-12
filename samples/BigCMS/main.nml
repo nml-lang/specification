@@ -1,0 +1,11 @@
+// Root object may always be generic
+{
+    import: components/nav/sidenav;
+
+    // Object that don't do anything except display text or import objects can be generic
+    {
+        import: components/nav/topnav;
+
+        import: dynamic(page)
+    }
+}

@@ -1,0 +1,23 @@
+{
+    table {
+        data: context.GetOrders();
+
+        // Specify table key (defaults to 'id').
+        idName: OrderId
+        columns: new [
+            { field: "Description", text: "Order Description", minWidth: 250px },
+            { field: "Order date", maxWidth: 200px },
+            { field: "Price", text: "Total price" },
+            { text: "Actions", content: {
+                link {
+                    text: Edit;
+                    link: `/order/{this.id}`
+                }
+                button {
+                    text: "Place order";
+                    @click: context.place(this.id);
+                }
+            } }
+        ];
+    }
+}
