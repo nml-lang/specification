@@ -1,4 +1,14 @@
 {
+    button {
+        text: "Add new";
+        // Assign contents to a empty container
+        @click: ( event ) => { container = context.DisplayOrderModel(); };
+    }
+
+    {
+        ref: container;
+    }
+
     table {
         data: context.GetOrders();
 

@@ -1,4 +1,4 @@
-rec {
+{
     import: button;
 
     rec {
@@ -16,7 +16,8 @@ rec {
         input {
             name: "row1";
             type: text;
-            restrict: Restrict.letters;
+            restrict: Letters;
+            // Becomes Restrict.Letters
         }
         input {
             name: "row2";

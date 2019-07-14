@@ -6,6 +6,8 @@
     {
         import: components/nav/topnav;
 
-        import: dynamic(page)
+        import: base.dynamic(page);
     }
+
+    import: components/footer;
 }

@@ -1,5 +1,4 @@
-rec: #canvas
-{
+rec: #canvas {
     width: 250;
     height: 200;
     colour: colour.white;
