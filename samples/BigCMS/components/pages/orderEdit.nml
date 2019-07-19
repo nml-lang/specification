@@ -1,0 +1,6 @@
+{
+    variables {
+        orderId: int = 0,
+        order: object = orderId != 0 ? context.GetOrder(var.orderId) : new object,
+    }
+}

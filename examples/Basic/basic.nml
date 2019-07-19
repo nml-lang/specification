@@ -1,18 +1,19 @@
-root {
-    title "Basic example"
-}
-
+// Root object may always be generic
 {
-    width: 250;
-    height: 200;
-    colour: colour.white;
-    background: colour.black;
+    title "Basic example";
 
-    img {
-        source: "pics/smallblue.png";
-        x: canvas.height / 2;
-    }
-    img {
-        source: "pics/logo.png";
+    rec {
+        width: 250;
+        height: 200;
+        colour: colour.white;
+        background: colour.black;
+
+        img {
+            source: "pics/smallblue.png";
+            x: canvas.height / 2;
+        }
+        img {
+            source: "pics/logo.png";
+        }
     }
 }

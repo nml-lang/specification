@@ -1,19 +1,16 @@
 {
     button {
         text: "Add new";
-        // Assign contents to a empty container
-        @click: ( event ) => { container = context.DisplayOrderModel(); };
-    }
+        @click: ( event ) => base.import("components/pages/orderEdit", (orderId) => {
 
-    {
-        ref: container;
+        });
     }
 
     table {
         data: context.GetOrders();
 
         // Specify table key (defaults to 'id').
-        idName: OrderId
+        idName: OrderId;
         columns: new [
             { field: "Description", text: "Order Description", minWidth: 250px },
             { field: "Order date", maxWidth: 200px },

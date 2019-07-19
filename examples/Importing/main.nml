@@ -1,0 +1,13 @@
+rec: #canvas {
+    width: 250;
+    height: 200;
+    colour: colour.white;
+    background: colour.black;
+
+    import: "images.nml" with (imgSources) => {
+        imgSource = [
+            "pics/smallblue.png",
+            "pics/logo.png"
+        ]
+    };
+}

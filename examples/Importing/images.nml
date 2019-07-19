@@ -1,7 +1,14 @@
-img: {
-    source: "pics/smallblue.png";
-    x: canvas.height / 2;
-}
-img: {
-    source: "pics/logo.png";
+{
+    // Declare variables that can be set on importing of file
+    variables: {
+        imgSources: string[] = context.GetImages();
+        height: int = this.height;
+    }
+
+    img: {
+        x: var.height / 2;
+
+        @for(img in var.imgSources.length);
+        source: img;
+    }
 }

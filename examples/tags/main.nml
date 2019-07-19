@@ -1,0 +1,38 @@
+ {
+    tags: container;
+    {
+        tags: .form-row;
+
+        input:
+        {
+            tags: form-control;
+            type: input.text;
+            name: "testInput";
+            placeholder: "Placeholder Value";
+            text: "Default Value";
+
+            label:
+            {
+                tags: col-form;
+                text: "Text";
+            }
+
+            description: {
+                tags: form-text text-muted;
+                text: "Help text";
+            }
+        }
+    }
+    import: "RowInput" with(input)
+    {
+        input = input: {
+            name: "testInput";
+            text: "";
+        }
+    };
+
+    button: {
+        tags: btn btn-primary
+        text: "Submit"
+    }
+}

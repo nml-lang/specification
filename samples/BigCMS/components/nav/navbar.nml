@@ -13,7 +13,9 @@
         // Types in loops can be omitted but for readability its advised to keep them.
         @for( segment in base.router.route.segments );
         text: segment;
-        tag: [breadcrumb, link];
+
+        text: segment;
+        tags: breadcrumb link;
     }
 
     rec {
